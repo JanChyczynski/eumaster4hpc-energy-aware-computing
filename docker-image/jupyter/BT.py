@@ -2461,7 +2461,6 @@ def compute_rhs(rho_i, us, vs, ws, square, qs, rhs, u): #Receive arrays as param
 	#	c_timers.timer_stop(T_RHS)
 #END compute_rhs()
 
-
 def adi(rho_i, us, vs, ws, square, qs, rhs, fjac, njac, lhs, u):
 	if timeron:
 		c_timers.timer_start(T_RHS)
@@ -2989,6 +2988,7 @@ def main():
 	
 	c_timers.timer_stop(1)
 	tmax = c_timers.timer_read(1)
+	emax = c_timers.energy_read(1)
 	
 	verified = verify()
 	n3 = 1.0 * grid_points[0] * grid_points[1] * grid_points[2]
@@ -3006,6 +3006,7 @@ def main():
 			grid_points[2],
 			niter,
 			tmax,
+            emax,
 			mflops,
 			"          floating point",
 			verified)
