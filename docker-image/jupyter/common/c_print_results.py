@@ -38,6 +38,7 @@ def c_print_results(name,
 					n3,
 					niter,
 					t, 
+                    e,
 					mops,
 					optype,
 					passed_verification):
@@ -60,8 +61,9 @@ def c_print_results(name,
 		else:
 			print(" Size            =           %4dx%4dx%4d" % (n1, n2, n3))
 	
-	print(" Iterations      =             %12d" % (niter)) 
+	print(" Iterations      =             %12d" % (niter))
 	print(" Time in seconds =             %12.2f" % (t))
+	print(" Energy in micro jules =       %12d" % (e))
 	print(" Mop/s total     =             %12.2f" % (mops))
 	print(" Operation type  = %24s" % (optype))
 	if passed_verification == None:
