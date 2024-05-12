@@ -93,11 +93,12 @@ def set_bt_info(class_npb):
 	global PROBLEM_SIZE, NITER_DEFAULT, DT_DEFAULT
 	
 	CLASS = class_npb
-	
+
+    
 	if class_npb == 'S':
 		PROBLEM_SIZE, NITER_DEFAULT, DT_DEFAULT = 12, 60, 0.010
-	elif class_npb == 'W':
-		PROBLEM_SIZE, NITER_DEFAULT, DT_DEFAULT = 24, 200, 0.0008
+	elif class_npb == 'XS':
+		PROBLEM_SIZE, NITER_DEFAULT, DT_DEFAULT = 12, 10, 0.010
 	elif class_npb == 'A':
 		PROBLEM_SIZE, NITER_DEFAULT, DT_DEFAULT = 64, 200, 0.0008
 	elif class_npb == 'B':
@@ -352,4 +353,3 @@ def set_sp_info(class_npb):
 		print("npbparams.py: Internal error: invalid class_npb type", class_npb)
 		sys.exit()
 #END set_bt_info()
-
